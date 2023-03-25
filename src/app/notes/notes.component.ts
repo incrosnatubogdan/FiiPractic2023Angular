@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Note } from '../shared/models/note.model';
+import { Component, Input } from '@angular/core';
+import { INote } from '../shared/interfaces/note.interface';
 
 @Component({
   selector: 'app-notes',
@@ -7,10 +7,10 @@ import { Note } from '../shared/models/note.model';
   styleUrls: ['./notes.component.scss']
 })
 export class NotesComponent {
-  public model = new Note(1, 'Something that i have to do', 'i will figure something out', '');
+  @Input() notes: INote[] = [];
+  public isFormVisible: boolean = true
 
-  submitted = false;
-
-  onSubmit() { this.submitted = !this.submitted; }
-
+  onNoteSubmit(event: INote) {
+    this.notes.push(event)
+  }
 }

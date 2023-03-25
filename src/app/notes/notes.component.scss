@@ -1,3 +1,27 @@
-.note-title {
-    margin-block-end: 2rem;
+.flex {
+    display: flex;
+}
+.note-container {
+    margin-inline-end: 4rem;
+}
+.notes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.note {
+    padding: 10px 20px;
+    border-radius: 2rem;
+    color: white;
+
+    .note-title {
+        border-bottom: 1px solid grey;
+        display: flex;
+        justify-content: center;
+        text-transform: capitalize;
+    }
+
+    .note-body {
+        padding-block-start: 1rem;
+    }
 }

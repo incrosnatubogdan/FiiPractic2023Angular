@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotesComponent } from './notes/notes.component';
 import { StructuralDirectivesComponent } from './shared/components/structural-directives/structural-directives.component';
+import { NotesFormComponent } from './notes/notes-form/notes-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotesComponent,
-    StructuralDirectivesComponent
+    StructuralDirectivesComponent,
+    NotesFormComponent
   ],
   imports: [
     BrowserModule,
